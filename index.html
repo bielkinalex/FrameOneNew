@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>FrameOne</title>
+  <meta name="description" content="Офіційний сайт кінотеатру FrameOne. Афіша, прем'єри, сеанси та бронювання квитків онлайн. Відчуй справжнє кіно!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      font-size: 14px;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .top-bar {
+      background-color: #1a1a1a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+
+    .top-bar .left {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .top-bar .right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .top-bar .right a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 8px;
+    }
+
+    .top-bar .right a img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .nav-bar {
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 15px 10px;
+    }
+
+    .nav-bar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .main-content h1 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .banner {
+      margin: 20px auto;
+      max-width: 100%;
+    }
+
+    .banner img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .now-showing {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .now-showing h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .movie-posters {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .movie {
+      width: 90%;
+      max-width: 350px;
+      text-align: center;
+    }
+
+    .movie img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .movie p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .showtimes {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .showtimes span {
+      margin: 4px 3px;
+      padding: 6px 10px;
+      background-color: #eaeaea;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .footer {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+      }
+
+      .top-bar .left {
+        font-size: 20px;
+      }
+
+      .top-bar .right {
+        justify-content: flex-start;
+        gap: 12px;
+        margin-top: 8px;
+      }
+
+      .nav-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 0;
+      }
+
+      .main-content {
+        padding: 15px;
+      }
+
+      .main-content h1 {
+        font-size: 16px;
+      }
+
+      .now-showing h2 {
+        font-size: 18px;
+      }
+
+      .showtimes span {
+        font-size: 13px;
+        padding: 5px 8px;
+      }
+
+      .footer {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="top-bar">
+      <div class="left">FrameOne</div>
+      <div class="right">
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook">
+        </a>
+        <a href="https://maps.google.com" target="_blank" aria-label="Google Maps">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/google-maps-new.png" alt="Google Maps">
+        </a>
+        <a href="tel:+380960881983" style="margin-left: 10px;">+380960881983</a>
+      </div>
+    </div>
+
+    <div class="nav-bar">
+      <a href="now-showing.html">Зараз у кіно</a>
+      <a href="#">Скоро у прокаті</a>
+      <a href="contact.html">Зв'язок з нами</a>
+      <a href="#">Про компанію</a>
+    </div>
+
+    <div class="main-content">
+      <h1>
+        Ласкаво просимо до "FrameOne" – місця, де кожен кадр відкриває нові емоції та враження!<br><br>
+        Сучасні кінозали з високоякісним зображенням та об'ємним звуком Dolby Atmos.<br>
+        Найочікуваніші прем’єри, ексклюзивні покази та добірка авторського кіно.<br>
+        Комфортні крісла, стильний інтер’єр і смачні снеки для повного занурення в перегляд.<br>
+        Зручне розташування та просте онлайн-бронювання квитків.
+      </h1>
+
+      <div class="banner">
+        <img src="images/banner.jpg" alt="Банер кінотеатру">
+      </div>
+
+      <div class="now-showing">
+        <h2>Зараз у кіно:</h2>
+        <p>Сеанси 1 червня</p>
+
+        <div class="movie-posters">
+          <div class="movie">
+            <img src="images/movie1.jpg" alt="ЛІЛО І СТІЧ">
+            <p>ЛІЛО І СТІЧ</p>
+            <div class="showtimes">
+              <span>12:00</span> <span>14:00</span>
+            </div>
+          </div>
+          <div class="movie">
+            <img src="images/movie2.jpg" alt="КАРАТЕ КІД: ЛЕГЕНДИ">
+            <p>КАРАТЕ КІД: ЛЕГЕНДИ</p>
+            <div class="showtimes">
+              <span>13:00</span> <span>15:00</span> <span>18:00</span>
+            </div>
+          </div>
+          <div class="movie">
+            <img src="images/movie3.jpg" alt="ЦАР ЦАРІВ">
+            <p>ЦАР ЦАРІВ</p>
+            <div class="showtimes">
+              <span>12:30</span> <span>16:00</span> <span>19:00</span>
+            </div>
+          </div>
+          <div class="movie">
+            <img src="images/movie4.jpg" alt="ПОСПІШАЙ У ЗАВТРА">
+            <p>ПОСПІШАЙ У ЗАВТРА</p>
+            <div class="showtimes">
+              <span>14:00</span> <span>17:00</span> <span>20:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2025 FrameOne. Усі права захищені.</p>
+    </footer>
+  </div>
+</body>
+</html>
